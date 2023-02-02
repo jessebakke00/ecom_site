@@ -1,8 +1,10 @@
 # Create your views here.
 from django.shortcuts import render
+from .models import *
 
 def store(request):
-    context = {}
+    products = Product.objects.all()
+    context = {'products':products}
     return render(request, 'my_store/store.html', context)
 
 def checkout(request):
