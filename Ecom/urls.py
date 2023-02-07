@@ -12,7 +12,7 @@ urlpatterns = patterns('',
     url(r'^$', 'Ecom.my_store.views.store', name='store'),
     url(r'^cart/', 'Ecom.my_store.views.cart', name='cart'),
     url(r'checkout/', 'Ecom.my_store.views.checkout', name='checkout'),
-
+    url(r'^update_item/', 'Ecom.my_store.views.updateItem', name='update_item'),
     # Uncomment the admin/doc line below to enable admin documentation:
     #url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 
