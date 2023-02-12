@@ -2,11 +2,13 @@
 import json
 from django.shortcuts import render
 from django.views.decorators.csrf import csrf_exempt
+import time
 from .custom_response import JsonResponse
 from .models import *
 from .utils import cookieCart, cookieData
 
 def store(request):
+    print request.META['HTTP_COOKIE']
     data = cookieData(request)
     cart_items = data['cart_items']
     order      = data['order']
@@ -33,6 +35,92 @@ def checkout(request):
         
     context = {'items':items, 'order':order, 'cart_items':cart_items, 'shipping':False}
     return render(request, 'my_store/checkout.html', context)
+
+@csrf_exempt
+def processOrder(request):
+    # get the post data, since cookies is fucked
+    post_data = json.loads(request.POST.keys()[0])
+    print post_data
+    # now make a timestamp for later use
+    transaction_id = time.time()
+    
+    if request.user.is_authenticated():
+        customer = request.user.customer
+        order, created = Order.objects.get_or_create(customer=customer)
+        # total = float(post_data['form']['total'])
+        # order.transaction_id = transaction_id
+        # 
+        # if total == order.get_cart_total:
+        #     order.complete = True
+        # order.save()
+        
+        # if order.shipping == True:
+        #     ShippingAddress.objects.create(
+        #         customer = customer,
+        #         order    = order,
+        #         address  = data['shipping']['address'],
+        #         city     = data['shipping']['city'],
+        #         state    = data['shipping']['state'],
+        #         zipcode  = data['shipping']['zipcode']
+        #     )
+    else:
+        print 'User is not logged in!!'
+        
+        name = post_data['form']['name']
+        email = post_data['form']['email']
+        
+        data = cookieCart(request)
+        print data
+        items = data['items']
+        
+        customer, created = Customer.objects.get_or_create(
+            email=email
+        )
+        
+        customer.name = name
+        customer.save()
+        
+        order = Order.objects.create(
+            customer=customer,
+            complete=False
+        )
+        
+        for item in items:
+            product = Product.objects.get(id=item['product']['id'])
+            orderItem = OrderItem.objects.create(
+                product=product,
+                order=order,
+                quantity=item['quantity']
+            )
+            
+    
+    total = float(post_data['form']['total'])
+    order.transaction_id = transaction_id
+    
+    if total == float(order.get_cart_total):
+        order.complete = True
+    order.save()
+    
+    
+    ShippingAddress.objects.create(
+        customer = customer,
+        order    = order,
+        address  = post_data['shipping']['address'],
+        city     = post_data['shipping']['city'],
+        state    = post_data['shipping']['state'],
+        zipcode  = post_data['shipping']['zipcode']
+    )
+        
+        
+    
+    
+    
+    # overwrite thecart file blank
+    f = open('cart', 'w')
+    f.write('')
+    f.close()
+    
+    return JsonResponse('Order Processed!!', safe=False)
 
 @csrf_exempt
 def updateItem(request):
@@ -63,7 +151,7 @@ def updateItem(request):
     return JsonResponse(data, safe=False)
 
 @csrf_exempt
-def updateCookie(request):    
+def updateCookie(request):   
     data = json.loads(request.POST.keys()[0])
     f = open('cart', 'w')
     f.write(request.POST.keys()[0])

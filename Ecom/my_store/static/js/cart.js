@@ -68,7 +68,7 @@ function updateCart(){
         method:'POST',
         headers:{
             'Content-Type':'application/json',
-            'XCSRFToken':csrftoken,
+            'X-CSRFToken':csrftoken,
         },
         body:JSON.stringify({'cart':cart})
     })
@@ -78,6 +78,7 @@ function updateCart(){
     .then((data) => {
         //console.log('action:', data.action, 'product:', data.productId);
         console.log('YESS!!');
+        location.reload();
     });
 }
 

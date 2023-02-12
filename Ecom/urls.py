@@ -14,6 +14,7 @@ urlpatterns = patterns('',
     url(r'checkout/', 'Ecom.my_store.views.checkout', name='checkout'),
     url(r'^update_item/', 'Ecom.my_store.views.updateItem', name='update_item'),
     url(r'^update_cookie/', 'Ecom.my_store.views.updateCookie', name='update_cookie'),
+    url(r'^process_order/', 'Ecom.my_store.views.processOrder', name='process_order'),
     # Uncomment the admin/doc line below to enable admin documentation:
     #url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 

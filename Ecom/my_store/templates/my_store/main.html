@@ -36,7 +36,7 @@
                 return null;
             }
             var cart = JSON.parse(getCookie('cart'));
-            
+            console.log('main.html line 38 cart is defined: value=', cart);
             if(cart == undefined){
                 cart = {};
                 console.log('cart created', cart);
