@@ -22,16 +22,19 @@ function addCookieItem(productId, action){
         }else{
             cart[productId]['quantity'] += 1;
         }
-        
-        if(action == 'remove'){
-            cart[productId]['quantity'] -= 1;
-            console.log('product should be deleted');
-            delete cart[productId];
-        }
     }
+        
+    if(action == 'remove'){
+        cart[productId]['quantity'] -= 1;
+    }
+    if(cart[productId]['quantity'] <= 0){
+        console.log('product should be deleted');
+        delete cart[productId];
+    }
+    
     console.log('cart: ', cart);
     document.cookie = 'cart=' + JSON.stringify(cart) + ";domain=;path=/";
-    updateCart();
+    location.reload();
 }
 
 function updateUserOrder(productId, action){
@@ -51,49 +54,7 @@ function updateUserOrder(productId, action){
         return response.json();    
     })
     .then((data) => {
-        //console.log('action:', data.action, 'product:', data.productId);
         location.reload();   
     });
 }
 
-function updateCookie(productId, action){
-    console.log('whiskey');
-    
-}
-
-function updateCart(){
-    var url = '/update_cookie/';
-    console.log('whiskey!', cart);
-    fetch(url, {
-        method:'POST',
-        headers:{
-            'Content-Type':'application/json',
-            'X-CSRFToken':csrftoken,
-        },
-        body:JSON.stringify({'cart':cart})
-    })
-    .then((response) => {
-        return response.json();    
-    })
-    .then((data) => {
-        //console.log('action:', data.action, 'product:', data.productId);
-        console.log('YESS!!');
-        location.reload();
-    });
-}
-
-
-//function getToken(name){
-//    var cookieValue = null;
-//    if(document.cookie && document.cookie != ''){
-//        var cookies = document.cookie.split(';');
-//        for(var i=0; i<cookies.length; i++){
-//            var cookie = cookies[i].trim();
-//            if(cookie.substring(0, name.length - 1) === (name + '=')){
-//                cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
-//                break;
-//            }
-//        }
-//    }
-//    return cookieValue;
-//}

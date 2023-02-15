@@ -2,17 +2,8 @@ import json
 from .models import *
 
 def cookieCart(request):
-    cart = json.loads(request.META['HTTP_COOKIE'][5:].split(';')[0])
-    #print type(d)
-    #print d
-    #print 'cart: ', cart
-    #f = open('cart', 'rw')
-    #s = f.read()
-    
     try:
-        #d = json.loads(s)
-        #cart = d['cart']
-        #print cart
+        cart = json.loads(request.META['HTTP_COOKIE'][5:].split(';')[0])
         items = []
         order = {'get_cart_items':0, 'get_cart_total':0}
         cart_items = order['get_cart_items']

@@ -8,7 +8,7 @@ from .models import *
 from .utils import cookieCart, cookieData
 
 def store(request):
-    print request.META['HTTP_COOKIE']
+    #print request.META['HTTP_COOKIE']
     data = cookieData(request)
     cart_items = data['cart_items']
     order      = data['order']
@@ -40,7 +40,7 @@ def checkout(request):
 def processOrder(request):
     # get the post data, since cookies is fucked
     post_data = json.loads(request.POST.keys()[0])
-    print post_data
+    #print post_data
     # now make a timestamp for later use
     transaction_id = time.time()
     
@@ -116,9 +116,9 @@ def processOrder(request):
     
     
     # overwrite thecart file blank
-    f = open('cart', 'w')
-    f.write('')
-    f.close()
+    # f = open('cart', 'w')
+    # f.write('')
+    # f.close()
     
     return JsonResponse('Order Processed!!', safe=False)
 
@@ -150,10 +150,10 @@ def updateItem(request):
     
     return JsonResponse(data, safe=False)
 
-@csrf_exempt
-def updateCookie(request):   
-    data = json.loads(request.POST.keys()[0])
-    f = open('cart', 'w')
-    f.write(request.POST.keys()[0])
-    f.close()
-    return JsonResponse('updated cookie', safe=False)
+# @csrf_exempt
+# def updateCookie(request):   
+#     data = json.loads(request.POST.keys()[0])
+#     f = open('cart', 'w')
+#     f.write(request.POST.keys()[0])
+#     f.close()
+#     return JsonResponse('updated cookie', safe=False)
