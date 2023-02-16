@@ -3,6 +3,13 @@ from django.contrib.auth.models import User
 
 # customer, product, order, and ordered item models
 
+STATUS_CHOICES = (
+    ('n', 'Not Shipped'),
+    ('s', 'Shipped'),
+)
+
+
+
 class Customer(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE, null=True, blank=True)
     name = models.CharField(max_length=200, null=True)
@@ -25,6 +32,7 @@ class Order(models.Model):
     date_ordered = models.DateTimeField(auto_now_add=True)
     complete = models.BooleanField(default=False, blank=False)
     transaction_id = models.CharField(max_length=200, null=True)
+    # status = models.CharField(max_length=1, choices=STATUS_CHOICES)
     
     def __str__(self):
         return str(self.transaction_id)

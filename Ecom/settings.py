@@ -1,6 +1,8 @@
 # Django settings for Ecom project.
 import os
 
+BASE_DIR = os.path.dirname(os.path.dirname(__file__))
+#CSRF_TRUSTED_ORIGINS = ['http://localhost:8000/', 'http://localhost:8000/admin']
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
@@ -62,7 +64,7 @@ MEDIA_URL = ''
 # Don't put anything in this directory yourself; store your static files
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/home/media/media.lawrence.com/static/"
-STATIC_ROOT = '/home/kali/Documents/ecom_site/Ecom/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # URL prefix for static files.
 # Example: "http://media.lawrence.com/static/"
@@ -75,7 +77,7 @@ ADMIN_MEDIA_PREFIX = '/static/admin/'
 
 # Additional locations of static files
 STATICFILES_DIRS = (
-    '/home/kali/Documents/ecom_site/Ecom/my_store/static',
+    os.path.join(BASE_DIR, 'Ecom/my_store/static'),
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
@@ -110,7 +112,8 @@ MIDDLEWARE_CLASSES = (
 ROOT_URLCONF = 'Ecom.urls'
 
 TEMPLATE_DIRS = (
-    '/home/kali/Documents/Ecom/my_store/templates',
+    os.path.join(BASE_DIR, 'Ecom/my_store/templates'),
+    #'/home/kali/Documents/Ecom/my_store/templates',
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
