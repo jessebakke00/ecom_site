@@ -58,8 +58,11 @@
                     </li>
                 </ul>
                 <div class="form-inline my-2 my-lg-0">
+                    {% if user == "AnonymousUser" %}
                     <a href="/admin/"class="btn btn-warning">Login</a>
-	     	
+                    {% else %}
+                    <a href="/admin/logout/"class="btn btn-warning">Log Out</a>
+                    {% endif %}
                     <a href="{% url my_store.views.cart %}">
                         <img  id="cart-icon" src="{{ STATIC_URL }}/images/cart.png">
                     </a>

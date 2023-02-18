@@ -9,13 +9,14 @@ from .utils import cookieCart, cookieData
 
 def store(request):
     #print request.META['HTTP_COOKIE']
+    print request.user
     data = cookieData(request)
     cart_items = data['cart_items']
     order      = data['order']
     items      = data['items']
         
     products = Product.objects.all()
-    context = {'products':products, 'cart_items':cart_items, 'shipping':False}
+    context = {'products':products, 'cart_items':cart_items, 'shipping':False, 'user':str(request.user)}
     return render(request, 'my_store/store.html', context)
 
 def cart(request):
@@ -35,6 +36,19 @@ def checkout(request):
         
     context = {'items':items, 'order':order, 'cart_items':cart_items, 'shipping':False}
     return render(request, 'my_store/checkout.html', context)
+
+def current_orders(request):
+    orders = Order.objects.all()
+    order_items = OrderItem.objects.all()
+    
+    
+    context = {'orders':orders, 'order_items':order_items}
+    return render(request, 'my_store/current_orders.html', context)
+
+def ship(request, transaction_id):
+    orders = Order.objects.get(transaction_id=transaction_id)
+    context = {}
+    return render(request, 'my_store/ship.html', context)
 
 @csrf_exempt
 def processOrder(request):
