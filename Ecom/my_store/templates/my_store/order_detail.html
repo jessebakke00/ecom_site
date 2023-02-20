@@ -36,37 +36,19 @@
   </div>
   <div class="box-element" style="margin:10px;">
     <div class="second-div">
-      <table class="main-table">
+      <table class="main-table skinny-table">
+        <thead>
+          <p class="dark"><h4>Shipping Details</h3></p>
+        </thead>
         <tr class="main-table-row">
           <td class="main-table-td">
-            <p class="dark"><strong>Address:</strong>  </p>
-          </td>
-          <td class="main-table-td">
-            <p class="dark">{{ shipping_address.address }}</p>
-          </td>
-        </tr>
-        <tr class="main-table-row">
-          <td class="main-table-td">
-              <p class="dark"><strong>City:</strong></p>
-          </td>
-          <td class="main-table-td">
-            <p class="dark">{{ shipping_address.city}}</p>
-          </td>
-        </tr>
-        <tr class="main-table-row">
-          <td class="main-table-td">
-            <p class="dark"><strong>State:</strong></p>
-          </td>
-          <td class="main-table-td">
-            <p class="dark">{{ shipping_address.state }}</p>
-          </td>
-        </tr>
-        <tr class="main-table-row">
-          <td class="main-table-td">
-            <p class="dark"><strong>Zipcode:</strong>  </p>
-          </td>
-          <td class="main-table-td">
-            <p class="dark">{{ shipping_address.zipcode }}</p>
+          <strong>Address:</strong><p class="dark">{{ shipping_address.address }}</p>
+          <hr>
+            <strong>City:</strong><p class="dark">{{ shipping_address.city}}</p>
+          <hr>
+            <strong>State:</strong><p class="dark">{{ shipping_address.state }}</p>
+            <hr>
+            <strong>Zipcode:</strong><p class="dark">{{ shipping_address.zipcode }}</p>
           </td>
         </tr>
         
