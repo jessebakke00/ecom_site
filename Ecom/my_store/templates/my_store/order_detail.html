@@ -34,25 +34,61 @@
             </tr>
           </table>
   </div>
-  <div class="box-element" style="margin:10px;">
+  <div class="box-element"">
     <div class="second-div">
-      <table class="main-table skinny-table">
+      <div class="third-div">
+      <table class="skinny-table">
         <thead>
-          <p class="dark"><h4>Shipping Details</h3></p>
+          <h4>Shipping Details</h4>
         </thead>
         <tr class="main-table-row">
           <td class="main-table-td">
-          <strong>Address:</strong><p class="dark">{{ shipping_address.address }}</p>
+          <p class="dark"><strong>Address:</strong>{{ shipping_address.address }}</p>
           <hr>
-            <strong>City:</strong><p class="dark">{{ shipping_address.city}}</p>
+            <p class="dark"><strong>City:</strong>{{ shipping_address.city}}</p>
           <hr>
-            <strong>State:</strong><p class="dark">{{ shipping_address.state }}</p>
+            <p class="dark"><strong>State:</strong>{{ shipping_address.state }}</p>
             <hr>
-            <strong>Zipcode:</strong><p class="dark">{{ shipping_address.zipcode }}</p>
+            <p class="dark"><strong>Zipcode:</strong>{{ shipping_address.zipcode }}</p>
           </td>
         </tr>
         
       </table>
+      </div>
+      <div class="third-div">
+      
+      <table class="skinny-table">
+        <thead>
+          <h4>Order Details</h4>
+        </thead>
+        
+          <tr>
+            <td class="p-info">
+              <p class="dark"><strong>Product </strong></p>
+            </td>
+            <td class="p-info">
+              <p class="dark"><strong>Quantity</strong></p>
+            </td>
+          </tr>
+            {% for item in order_items %}
+          <tr>
+          <td class="p-info">
+            <p class="dark">{{ item.product }}</p>
+            
+          </td>
+          <td class="p-info">
+            <!--<strong>Price:  </strong><p class="dark">{{ item.price}}</p>-->
+          
+            <p class="dark">{{ item.quantity }}</p>
+            
+          </td>
+          </tr>    
+            {% endfor %}
+        
+        
+      </table>
+      
+      </div>
     </div>
   </div>
 </div>

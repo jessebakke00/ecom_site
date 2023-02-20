@@ -6,6 +6,25 @@ import time
 from .custom_response import JsonResponse
 from .models import *
 from .utils import cookieCart, cookieData
+from django.contrib.admin.forms import AuthenticationForm
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.forms import AuthenticationForm
+from django.contrib.admin.models import User
+
+
+def create_user(request):
+    form = UserCreationForm()
+    
+    if request.method == request.POST:
+        form = UserCreateationForm()
+    context = {'form':form}
+    return render(request, 'my_store/create_user.html', context)
+
+def login(request):
+    
+    context = {}
+    return render(request, 'my_store/login.html', context)
+
 
 def store(request):
     #print request.META['HTTP_COOKIE']
@@ -37,6 +56,8 @@ def checkout(request):
     context = {'items':items, 'order':order, 'cart_items':cart_items, 'shipping':False}
     return render(request, 'my_store/checkout.html', context)
 
+
+
 def current_orders(request):
     orders = Order.objects.all()
     order_items = OrderItem.objects.all()
@@ -49,10 +70,11 @@ def ship_detail(request, transaction_id):
     transaction_id = float(transaction_id)
     print transaction_id
     order = Order.objects.get(transaction_id=transaction_id)
+    order_items = OrderItem.objects.filter(order=order)
     shipping_address = ShippingAddress.objects.get(order=order)
     
     
-    context = {'order':order, 'shipping_address':shipping_address}
+    context = {'order':order, 'shipping_address':shipping_address, 'order_items':order_items}
     return render(request, 'my_store/order_detail.html', context)
 
 @csrf_exempt

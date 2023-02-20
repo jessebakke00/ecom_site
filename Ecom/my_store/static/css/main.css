@@ -6,14 +6,17 @@ h1,h2,h3,h4,h5,h6{
 	color:hsl(0, 0%, 30%);
 }
 
-strong{
+/*strong{
 	margin-left: 0px;
 	padding-left: 0px;
-}
+}*/
 
 .main-table{
-	width: 330px;
+	width: 340px;
 	margin: 10px;
+	padding: 20px;
+	margin-top: 20px;
+	/*box-shadow:hsl(0, 0%, 80%) 0 0 16px;*/
 }
 
 .main-table-td-left{
@@ -21,6 +24,7 @@ strong{
 	width: 140px;
 	min-width: 140px;	
 }
+
 
 .main-table-td-right{	
 	color: #efefef;
@@ -32,28 +36,46 @@ strong{
 }
 
 .skinny-table{
-	width: 150px;
+	width: 400px;
+	padding: 10px;
+	border: 1px solid black;
+}
+
+.skinny-table tr td{
+	border: 1px solid blue;
+}
+
+.main-table{
+	border: 1px solid black;
 }
 
 
 table tr td:first-child{
-	width: 150px;
+	/*width: 150px;
 	min-width: 150px;
 	max-width: 150px;
-	margin-top: -15px;
+	margin-top: -15px;*/
 }
 
 .second-div{
 	padding: 10px;
-	margin: 10px;
+	margin: 10px;	
+	display: flex;
 }
+
 
 .dark{
 	color: #545454;
-	padding: 0px;
-	margin: 0px;
-	margin-left: 0px;
+	padding: 10px;
+	margin: 3px;
+	margin-left: 7px;
 }
+
+.p-info{
+	border-bottom: 1px solid #545454;
+	
+}
+ 
 
 h4{
 	background-color: #4f868c!important;
@@ -61,10 +83,20 @@ h4{
 	padding: 15px 20px;
 	border-radius: 2px;
 	color: #efefef;
+	width: 400px;
+}
+ /*
+table{
+	padding: 10px;
+}*/
+
+.second-div{
+	display: flex;
+	padding: 10px;
 }
 
-thead{
-	background-color: #4f868c;
+.third-div{
+	flex: 1;
 }
 
 .plain{	
