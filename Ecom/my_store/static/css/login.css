@@ -1,35 +1,48 @@
 
 
-
-.container {
-  width: 100%;
-  padding-left: 18%;
+.container{
+  position: relative;
+  width: 60%;
   display: block;
-  align-items: center;
-  justify-content: center;
-  background-color: #efefef;
-  margin-top: 20px;
-}
-.header{
-  display: block;
-  width: 50%;
-  justify-content: center;
-  align-items: center;
-  background-color: green;
-  padding: 10px;
-  
 }
 
-#form-container{
-  width: 50%;
-  
-  
-  border: 1px solid black;
+.form-container{
+  margin-top: 10px;
+  background-color: #ffffff;
+  box-shadow:hsl(0, 0%, 80%) 0 0 16px;
+  padding: 0px;
+  padding-bottom: 10px;
+  border-radius: 3px;
 }
 
-#form_container p{
+.headline{
+  font-size: small;
+  text-align: center;
+}
+
+.container h1{
+  background-color: #cdcdcd;
   width: 100%;
-  font-size: 10px;
-  
-  
+  margin: 0px;
+  padding: 5px 15px;
+  border-radius: 3px 3px 0px 0px;
+  text-align: center;
+}
+
+form{
+  margin: 10px;
+}
+
+form p{
+  width: 100%;
+  font-size: small;
+  text-align: left;
+}
+
+form p:first-child, form p:nth-child(2), form p:nth-child(3){  
+  float: left;
+}
+
+form p input{
+  float: right;
 }

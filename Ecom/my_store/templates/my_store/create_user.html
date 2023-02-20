@@ -2,14 +2,35 @@
 
 {% block content %}
 <link type="text/css" rel="stylesheet" href="/static/css/login.css"></link>
-<div class="container">
-  <div class="header">
-    Create Account
-  </div>
-  <div id="form-container">
-    {{ form.as_p }}
+<div class="container form-container">
+  <h1>Register</h1>
+  <p class="headline">Please complete the form to create an account</p>
+  <hr>
+  <form method="post" action="">
+  <p><strong>
+    {{ form.username.label }}
+    </strong>
+    {{ form.username }}
+  </p>
+  <p>
+    <strong>
+    {{ form.password1.label }}
+    </strong>
+    {{ form.password1 }}
+  </p>
+  <p>
+    <strong>
+    Confirm
+    </strong>
+    {{ form.password2 }}
+  </p>
+  <p>
+    <hr>
+    <input type="submit" name="Create User">
+  </p>
+  </form>
     
-  </div>
+  
 
 </div>
 {% endblock %}    
