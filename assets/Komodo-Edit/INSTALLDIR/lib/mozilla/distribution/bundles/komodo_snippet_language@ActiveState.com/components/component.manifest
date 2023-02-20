@@ -1,0 +1,7 @@
+contract @activestate.com/koLanguage?language=Komodo%20Snippet;1 {5042e8d9-7a1e-44bc-9552-d37f60f14c47}
+category komodo-language Komodo%20Snippet @activestate.com/koLanguage?language=Komodo%20Snippet;1
+component {5042e8d9-7a1e-44bc-9552-d37f60f14c47} komodoSnippet_UDL_Language.py
+category category-komodo-linter Komodo%20Snippet @activestate.com/koLinter?language=Komodo%20Snippet;1
+contract @activestate.com/koLinter?language=Komodo%20Snippet;1 {597b8e69-c0bd-4f27-be01-7e07d26120de}
+category komodo-language-info Komodo%20Snippet %7B%22name%22%3A%20%22Komodo%20Snippet%22%2C%20%22defaultExtension%22%3A%20%22.snippet%22%7D
+component {597b8e69-c0bd-4f27-be01-7e07d26120de} komodoSnippet_UDL_Language.py

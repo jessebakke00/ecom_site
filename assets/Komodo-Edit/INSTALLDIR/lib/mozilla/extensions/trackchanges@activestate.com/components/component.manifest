@@ -1,0 +1,3 @@
+contract @activestate.com/koChangeTracker;1 {7b258fa9-dd80-4c28-bcaf-c203be779278}
+component {7b258fa9-dd80-4c28-bcaf-c203be779278} koChangeTracker.py
+interfaces koIChangeTracker.xpt

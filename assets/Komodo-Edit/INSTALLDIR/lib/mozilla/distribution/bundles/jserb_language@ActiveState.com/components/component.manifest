@@ -1,0 +1,7 @@
+contract @activestate.com/koLanguage?language=JSERB;1 {75C71FDC-B09A-4924-BE99-D06A47A24109}
+category komodo-language-info JSERB %7B%22name%22%3A%20%22JSERB%22%2C%20%22defaultExtension%22%3A%20%22.js.erb%22%7D
+category category-komodo-linter JSERB @activestate.com/koLinter?language=JSERB;1
+component {75C71FDC-B09A-4924-BE99-D06A47A24109} koJSERB_UDL_Language.py
+contract @activestate.com/koLinter?language=JSERB;1 {F412478A-6DA6-4DF8-A6D6-E26A1DADF1A4}
+category komodo-language JSERB @activestate.com/koLanguage?language=JSERB;1
+component {F412478A-6DA6-4DF8-A6D6-E26A1DADF1A4} koJSERB_UDL_Language.py

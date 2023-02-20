@@ -1,0 +1,4 @@
+contract @activestate.com/koLanguage?language=Mustache;1 {ff35a478-6e4e-4daf-a608-a3837c157fbe}
+category komodo-language Mustache @activestate.com/koLanguage?language=Mustache;1
+category komodo-language-info Mustache %7B%22name%22%3A%20%22Mustache%22%2C%20%22primary%22%3A%201%7D
+component {ff35a478-6e4e-4daf-a608-a3837c157fbe} koMustache_UDL_Language.py

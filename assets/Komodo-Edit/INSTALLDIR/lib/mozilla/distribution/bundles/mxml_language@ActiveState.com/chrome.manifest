@@ -1,0 +1,4 @@
+category  xml-catalog  mxml_language@ActiveState.com  1
+manifest components/component.manifest
+category xmlcatalogs mxml_language@ActiveState.com 1
+category udl-lexers mxml_language@ActiveState.com 1

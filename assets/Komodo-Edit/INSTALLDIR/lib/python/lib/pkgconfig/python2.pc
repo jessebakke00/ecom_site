@@ -1,0 +1,13 @@
+prefix=/home/komodo-build/mozbuilds/release/edit-12.0/hg-ff-35.0.0/mozilla/ko-12.0.x/dist
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: Python
+Description: Python library
+Requires: 
+Version: 2.7
+Libs.private: -lpthread -ldl  -lutil
+Libs: -L${libdir} -lpython2.7
+Cflags: -I${includedir}/python2.7 
+

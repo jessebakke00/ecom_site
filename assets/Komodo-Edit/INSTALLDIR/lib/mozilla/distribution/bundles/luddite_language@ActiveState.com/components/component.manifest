@@ -1,0 +1,4 @@
+component {9B7AA7E1-15DF-443F-9B4C-014047222FBA} koLuddite_UDL_Language.py
+category komodo-language Luddite @activestate.com/koLanguage?language=Luddite;1
+category komodo-language-info Luddite %7B%22name%22%3A%20%22Luddite%22%2C%20%22defaultExtension%22%3A%20%22.udl%22%7D
+contract @activestate.com/koLanguage?language=Luddite;1 {9B7AA7E1-15DF-443F-9B4C-014047222FBA}

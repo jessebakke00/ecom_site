@@ -1,0 +1,4 @@
+category komodo-language-info TracWiki %7B%22name%22%3A%20%22TracWiki%22%2C%20%22defaultExtension%22%3A%20%22.tracwiki%22%2C%20%22primary%22%3A%200%7D
+component {b843faa8-aeea-4fcb-aeb9-36c4483c6f95} koTracWiki_UDL_Language.py
+category komodo-language TracWiki @activestate.com/koLanguage?language=TracWiki;1
+contract @activestate.com/koLanguage?language=TracWiki;1 {b843faa8-aeea-4fcb-aeb9-36c4483c6f95}

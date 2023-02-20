@@ -1,0 +1,78 @@
+{% extends 'my_store/main.html' %}
+
+
+{% block content %}
+<div class="container">
+  <div class="bg-dark second-div">
+          <table class="main-table">
+            <th>
+              
+            </th>
+            <tr class="main-table-row">
+              <td class="main-table-td-left">
+                <strong>Order Number:</strong>
+              </td>
+              <td class="main-table-td-right">
+                {{ shipping_address.order }}  
+              </td>
+            </tr>
+            <tr>
+              <td class="main-table-td-left">
+                <strong>Customer Name:</strong>
+              </td>
+              <td class="main-table-td-right">
+                {{ shipping_address.customer.name }}    
+              </td>
+            </tr>
+            <tr>
+              <td class="main-table-td-left">
+              <strong>Customer Email:</strong>    
+              </td>
+              <td class="main-table-td-right">
+                {{ shipping_address.customer.email }}    
+              </td>
+            </tr>
+          </table>
+  </div>
+  <div class="box-element" style="margin:10px;">
+    <div class="second-div">
+      <table class="main-table">
+        <tr class="main-table-row">
+          <td class="main-table-td">
+            <p class="dark"><strong>Address:</strong>  </p>
+          </td>
+          <td class="main-table-td">
+            <p class="dark">{{ shipping_address.address }}</p>
+          </td>
+        </tr>
+        <tr class="main-table-row">
+          <td class="main-table-td">
+              <p class="dark"><strong>City:</strong></p>
+          </td>
+          <td class="main-table-td">
+            <p class="dark">{{ shipping_address.city}}</p>
+          </td>
+        </tr>
+        <tr class="main-table-row">
+          <td class="main-table-td">
+            <p class="dark"><strong>State:</strong></p>
+          </td>
+          <td class="main-table-td">
+            <p class="dark">{{ shipping_address.state }}</p>
+          </td>
+        </tr>
+        <tr class="main-table-row">
+          <td class="main-table-td">
+            <p class="dark"><strong>Zipcode:</strong>  </p>
+          </td>
+          <td class="main-table-td">
+            <p class="dark">{{ shipping_address.zipcode }}</p>
+          </td>
+        </tr>
+        
+      </table>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

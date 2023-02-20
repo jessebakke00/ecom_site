@@ -1,0 +1,7 @@
+component {c30d9ea6-bb99-474d-9488-4d92dd833acb} koDjango_UDL_Language.py
+category komodo-language Django @activestate.com/koLanguage?language=Django;1
+category category-komodo-linter Django @activestate.com/koLinter?language=Django;1
+component {5c36e354-525e-11db-82d8-000d935d3368} koDjango_UDL_Language.py
+contract @activestate.com/koLanguage?language=Django;1 {5c36e354-525e-11db-82d8-000d935d3368}
+contract @activestate.com/koLinter?language=Django;1 {c30d9ea6-bb99-474d-9488-4d92dd833acb}
+category komodo-language-info Django %7B%22extraFileAssociations%22%3A%20%5B%22%2A.django%22%5D%2C%20%22name%22%3A%20%22Django%22%2C%20%22defaultExtension%22%3A%20%22.django.html%22%2C%20%22primary%22%3A%201%7D

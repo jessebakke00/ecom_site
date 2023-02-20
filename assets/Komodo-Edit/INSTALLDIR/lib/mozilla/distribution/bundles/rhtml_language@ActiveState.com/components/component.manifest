@@ -1,0 +1,7 @@
+contract @activestate.com/koLinter?language=RHTML;1 {c7f2d724-5991-4df3-965b-12db942a4ad2}
+component {c7f2d724-5991-4df3-965b-12db942a4ad2} koRHTML_UDL_Language.py
+category komodo-language-info RHTML %7B%22name%22%3A%20%22RHTML%22%2C%20%22defaultExtension%22%3A%20%22.rhtml%22%2C%20%22primary%22%3A%201%7D
+category komodo-language RHTML @activestate.com/koLanguage?language=RHTML;1
+category category-komodo-linter RHTML @activestate.com/koLinter?language=RHTML;1
+component {A554B7D4-7920-4BDC-BA71-5D8555B9C9DB} koRHTML_UDL_Language.py
+contract @activestate.com/koLanguage?language=RHTML;1 {A554B7D4-7920-4BDC-BA71-5D8555B9C9DB}

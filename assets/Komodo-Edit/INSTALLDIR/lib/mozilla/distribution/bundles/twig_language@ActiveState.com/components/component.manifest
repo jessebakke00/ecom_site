@@ -1,0 +1,4 @@
+component {2ae17256-e73f-4318-bb11-aeb07e68f1d6} koTwig_UDL_Language.py
+category komodo-language Twig @activestate.com/koLanguage?language=Twig;1
+contract @activestate.com/koLanguage?language=Twig;1 {2ae17256-e73f-4318-bb11-aeb07e68f1d6}
+category komodo-language-info Twig %7B%22name%22%3A%20%22Twig%22%2C%20%22defaultExtension%22%3A%20%22.twig%22%2C%20%22primary%22%3A%200%7D

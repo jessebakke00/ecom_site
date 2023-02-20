@@ -1,0 +1,13 @@
+component {a6f9a47e-d3dc-404a-bc1b-b6918e2f1f09} koGoAppInfo.py
+contract @activestate.com/koAppInfoEx?app=Gocode;1 {b73ce971-799d-456f-8ed0-eab3377f20d5}
+component {9ef3a4c9-1834-4040-9c30-9481704ab967} koGoAppInfo.py
+contract @activestate.com/koAppInfoEx?app=Go;1 {9ef3a4c9-1834-4040-9c30-9481704ab967}
+component {b73ce971-799d-456f-8ed0-eab3377f20d5} koGoAppInfo.py
+contract @activestate.com/koAppInfoEx?app=Godef;1 {a6f9a47e-d3dc-404a-bc1b-b6918e2f1f09}
+component {2d6ed8b6-f079-441a-8b5a-10ef781cb989} koGoLanguage.py
+contract @activestate.com/koLanguage?language=Go;1 {2d6ed8b6-f079-441a-8b5a-10ef781cb989}
+contract @activestate.com/koLinter?language=Go;1 {5bd15d0e-4763-435b-a936-00a7921f9bf9}
+category komodo-language-info Go %7B%22modeNames%22%3A%20%5B%22go%22%5D%2C%20%22name%22%3A%20%22Go%22%2C%20%22accessKey%22%3A%20%22g%22%2C%20%22primary%22%3A%201%2C%20%22internal%22%3A%200%2C%20%22defaultExtension%22%3A%20%22.go%22%7D
+component {5bd15d0e-4763-435b-a936-00a7921f9bf9} koGoLanguage.py
+category komodo-language Go @activestate.com/koLanguage?language=Go;1
+category category-komodo-linter Go @activestate.com/koLinter?language=Go;1

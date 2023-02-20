@@ -1,0 +1,4 @@
+category komodo-language Handlebars @activestate.com/koLanguage?language=Handlebars;1
+category komodo-language-info Handlebars %7B%22name%22%3A%20%22Handlebars%22%2C%20%22primary%22%3A%201%7D
+component {59f91e08-64c2-40e7-9c4b-730c231af7d3} koHandlebars_UDL_Language.py
+contract @activestate.com/koLanguage?language=Handlebars;1 {59f91e08-64c2-40e7-9c4b-730c231af7d3}

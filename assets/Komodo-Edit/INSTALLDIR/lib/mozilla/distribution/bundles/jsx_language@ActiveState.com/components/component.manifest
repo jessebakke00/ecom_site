@@ -1,0 +1,4 @@
+contract @activestate.com/koLanguage?language=JSX;1 {e5611d6c-c2b8-4fd7-b1f8-9138f8d70076}
+category komodo-language JSX @activestate.com/koLanguage?language=JSX;1
+component {e5611d6c-c2b8-4fd7-b1f8-9138f8d70076} koJSX_UDL_Language.py
+category komodo-language-info JSX %7B%22name%22%3A%20%22JSX%22%2C%20%22primary%22%3A%201%7D

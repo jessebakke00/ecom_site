@@ -1,0 +1,9 @@
+manifest components/component.manifest
+
+
+
+
+content editorconfig jar:editorconfig.jar!/content/
+
+
+overlay chrome://komodo/content/komodo.xul chrome://editorconfig/content/overlay.xul

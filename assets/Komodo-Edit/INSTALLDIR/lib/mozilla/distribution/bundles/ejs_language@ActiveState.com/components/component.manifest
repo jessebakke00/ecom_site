@@ -1,0 +1,7 @@
+contract @activestate.com/koLanguage?language=EJS;1 {B341E24D-0857-4608-9EFE-389F8CDCD34F}
+component {4A3A959D-469F-4675-8420-9C0B9878F136} koEJS_UDL_Language.py
+category category-komodo-linter EJS @activestate.com/koLinter?language=EJS;1
+contract @activestate.com/koLinter?language=EJS;1 {4A3A959D-469F-4675-8420-9C0B9878F136}
+category komodo-language-info EJS %7B%22name%22%3A%20%22EJS%22%2C%20%22defaultExtension%22%3A%20%22.ejs%22%7D
+component {B341E24D-0857-4608-9EFE-389F8CDCD34F} koEJS_UDL_Language.py
+category komodo-language EJS @activestate.com/koLanguage?language=EJS;1

@@ -1,0 +1,10 @@
+
+
+
+
+
+content scope-files jar:scope-files.jar!/content/
+skin scope-files classic/1.0 jar:scope-files.jar!/skin/
+locale scope-files en-US jar:scope-files.jar!/locale/en-US/
+
+manifest components/component.manifest

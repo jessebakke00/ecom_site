@@ -1,0 +1,4 @@
+category komodo-language-info reStructuredText %7B%22name%22%3A%20%22reStructuredText%22%2C%20%22defaultExtension%22%3A%20%22.rst%22%2C%20%22primary%22%3A%200%7D
+contract @activestate.com/koLanguage?language=reStructuredText;1 {d98cc808-2981-4aa0-841b-e5e920d83177}
+category komodo-language reStructuredText @activestate.com/koLanguage?language=reStructuredText;1
+component {d98cc808-2981-4aa0-841b-e5e920d83177} koreStructuredText_UDL_Language.py

@@ -1,0 +1,5 @@
+content famfamfamsilk jar:silk.jar!/content/
+skin famfamfamsilk classic/1.0 jar:silk.jar!/skin/
+locale famfamfamsilk en-US jar:silk.jar!/locale/en-US/
+
+overlay chrome://komodo/content/dialogs/iconpicker.xul chrome://famfamfamsilk/content/overlay-iconpicker.xul

@@ -1,0 +1,4 @@
+category komodo-language R @activestate.com/koLanguage?language=R;1
+contract @activestate.com/koLanguage?language=R;1 {ec4a2833-5994-4c94-9be5-db6a8952029f}
+category komodo-language-info R %7B%22name%22%3A%20%22R%22%2C%20%22defaultExtension%22%3A%20%22.R%2C.r%2C.Rout%2C.Rhistory%2C.Rt%2C.Rout.save%2C.Rout.fail%2C.S%22%2C%20%22primary%22%3A%200%7D
+component {ec4a2833-5994-4c94-9be5-db6a8952029f} koR_UDL_Language.py

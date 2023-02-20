@@ -1,0 +1,4 @@
+component {f248fe85-caef-4ca9-9968-e4c45ba2b729} koJinja2_UDL_Language.py
+category komodo-language Jinja2 @activestate.com/koLanguage?language=Jinja2;1
+category komodo-language-info Jinja2 %7B%22name%22%3A%20%22Jinja2%22%2C%20%22defaultExtension%22%3A%20%22.jinja%22%7D
+contract @activestate.com/koLanguage?language=Jinja2;1 {f248fe85-caef-4ca9-9968-e4c45ba2b729}

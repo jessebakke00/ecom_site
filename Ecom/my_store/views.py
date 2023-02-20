@@ -40,15 +40,20 @@ def checkout(request):
 def current_orders(request):
     orders = Order.objects.all()
     order_items = OrderItem.objects.all()
-    
+    shipping_address = ShippingAddress.objects.all()
     
     context = {'orders':orders, 'order_items':order_items}
     return render(request, 'my_store/current_orders.html', context)
 
-def ship(request, transaction_id):
-    orders = Order.objects.get(transaction_id=transaction_id)
-    context = {}
-    return render(request, 'my_store/ship.html', context)
+def ship_detail(request, transaction_id):
+    transaction_id = float(transaction_id)
+    print transaction_id
+    order = Order.objects.get(transaction_id=transaction_id)
+    shipping_address = ShippingAddress.objects.get(order=order)
+    
+    
+    context = {'order':order, 'shipping_address':shipping_address}
+    return render(request, 'my_store/order_detail.html', context)
 
 @csrf_exempt
 def processOrder(request):

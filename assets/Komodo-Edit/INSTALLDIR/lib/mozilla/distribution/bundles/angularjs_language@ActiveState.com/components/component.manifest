@@ -1,0 +1,4 @@
+component {da0400ca-579b-4f1d-98b7-65e41908c400} koAngularJS_UDL_Language.py
+contract @activestate.com/koLanguage?language=AngularJS;1 {da0400ca-579b-4f1d-98b7-65e41908c400}
+category komodo-language AngularJS @activestate.com/koLanguage?language=AngularJS;1
+category komodo-language-info AngularJS %7B%22accessKey%22%3A%20%22n%22%2C%20%22name%22%3A%20%22AngularJS%22%2C%20%22defaultExtension%22%3A%20%22.html%22%2C%20%22primary%22%3A%201%7D

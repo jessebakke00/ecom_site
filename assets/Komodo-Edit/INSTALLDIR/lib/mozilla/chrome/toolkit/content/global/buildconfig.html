@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width; user-scalable=false;">
+  <title>about:buildconfig</title>
+  <link rel="stylesheet" href="chrome://global/skin/about.css" type="text/css">
+  <style type="text/css">
+    th { text-align: start; }
+    h2 { margin-top: 1.5em; }
+    th, td { vertical-align: top; }
+  </style>
+</head>
+<body class="aboutPageWideContainer">
+<h1>about:buildconfig</h1>
+<h2>Build Machine</h2>
+<p>localhost</p>
+<h2>Source</h2>
+<p>Built from <a href="http://hg.mozilla.org/releases/mozilla-release/rev/32e36869f84a">http://hg.mozilla.org/releases/mozilla-release/rev/32e36869f84a</a></p>
+<h2>Build platform</h2>
+<table>
+  <tbody>
+    <tr>
+      <th>target</th>
+    </tr>
+    <tr>
+      <td>x86_64-unknown-linux-gnu</td>
+    </tr>
+  </tbody>
+</table>
+<h2>Build tools</h2>
+<table>
+  <tbody>
+    <tr>
+      <th>Compiler</th>
+      <th>Version</th>
+      <th>Compiler flags</th>
+    </tr>
+    <tr>
+      <td>/opt/rh/devtoolset-2/root/usr/bin/gcc</td>
+      <td>4.8.2</td>
+      <td>-Wall -Wdeclaration-after-statement -Wempty-body -Wpointer-to-int-cast -Wsign-compare -Wtype-limits -Werror=char-subscripts -Werror=comment -Werror=endif-labels -Werror=enum-compare -Werror=ignored-qualifiers -Werror=int-to-pointer-cast -Werror=multichar -Werror=nonnull -Werror=pointer-arith -Werror=pointer-sign -Werror=return-type -Werror=sequence-point -Werror=trigraphs -Werror=unknown-pragmas -Wno-unused -Wcast-align -gdwarf-2 -std=gnu99 -fgnu89-inline -fno-strict-aliasing -ffunction-sections -fdata-sections -fno-math-errno -pthread -pipe</td>
+    </tr>
+    <tr>
+      <td>/opt/rh/devtoolset-2/root/usr/bin/g++</td>
+      <td>4.8.2</td>
+      <td> -Wall -Wempty-body -Woverloaded-virtual -Wsign-compare -Wwrite-strings -Werror=endif-labels -Werror=int-to-pointer-cast -Werror=missing-braces -Werror=pointer-arith -Werror=return-type -Werror=sequence-point -Werror=unused-label -Werror=trigraphs -Werror=type-limits -Wno-invalid-offsetof -Wcast-align -gdwarf-2 -fno-exceptions -fno-strict-aliasing -fno-rtti -ffunction-sections -fdata-sections -fno-exceptions -fno-math-errno -std=gnu++0x -pthread -pipe  -DNDEBUG -DTRIMMED -gdwarf-2 -freorder-blocks -Os  -fomit-frame-pointer </td>
+    </tr>
+  </tbody>
+</table>
+<h2>Configure arguments</h2>
+<p> --enable-stdcxx-compat --disable-gstreamer --disable-elf-hack --disable-gio --enable-gnomeui --enable-gold --enable-help-viewer --disable-tests --enable-optimize --disable-debug --enable-debug-symbols=-gdwarf-2 --enable-application=komodo --enable-extensions=</p>
+</body>
+</html>

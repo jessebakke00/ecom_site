@@ -1,0 +1,7 @@
+component {4e023df3-4fda-4c74-abe0-b6623d72862e} koXBL_UDL_Language.py
+category komodo-language-info XBL %7B%22publicIdList%22%3A%20%5B%22-//MOZILLA//DTD%20XBL%20V1.0//EN%22%5D%2C%20%22systemIdList%22%3A%20%5B%22http%3A//www.mozilla.org/xbl%22%5D%2C%20%22namespaces%22%3A%20%5B%22http%3A//www.mozilla.org/xbl%22%5D%2C%20%22name%22%3A%20%22XBL%22%2C%20%22defaultExtension%22%3A%20%22.xbl%22%7D
+category category-komodo-linter XBL @activestate.com/koLinter?language=XBL;1
+category komodo-language XBL @activestate.com/koLanguage?language=XBL;1
+component {46D9A883-9410-47D2-B4CE-5D3186A6D4C8} koXBL_UDL_Language.py
+contract @activestate.com/koLanguage?language=XBL;1 {46D9A883-9410-47D2-B4CE-5D3186A6D4C8}
+contract @activestate.com/koLinter?language=XBL;1 {4e023df3-4fda-4c74-abe0-b6623d72862e}

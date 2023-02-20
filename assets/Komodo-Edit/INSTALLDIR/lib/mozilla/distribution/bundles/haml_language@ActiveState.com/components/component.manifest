@@ -1,0 +1,7 @@
+category komodo-language-info Haml %7B%22name%22%3A%20%22Haml%22%7D
+component {6B22D713-D6C2-4B2A-91E6-DED7C833C6ED} koHaml_UDL_Language.py
+category komodo-language Haml @activestate.com/koLanguage?language=Haml;1
+contract @activestate.com/koLanguage?language=Haml;1 {6B22D713-D6C2-4B2A-91E6-DED7C833C6ED}
+category komodo-language-info Haml %7B%22name%22%3A%20%22Haml%22%2C%20%22defaultExtension%22%3A%20%22.haml%22%2C%20%22primary%22%3A%200%7D
+contract @activestate.com/koLanguage?language=Haml;1 {4813db69-46ad-4e69-9be0-0d4dfa982333}
+component {4813db69-46ad-4e69-9be0-0d4dfa982333} koHamlLanguage.py

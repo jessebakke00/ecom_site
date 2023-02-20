@@ -1,0 +1,4 @@
+contract @activestate.com/koLanguage?language=Docker;1 {54072a7f-a845-4b78-b63f-fc47c583e0b8}
+category komodo-language Docker @activestate.com/koLanguage?language=Docker;1
+category komodo-language-info Docker %7B%22extraFileAssociations%22%3A%20%5B%22Dockerfile%22%5D%2C%20%22name%22%3A%20%22Docker%22%2C%20%22primary%22%3A%200%7D
+component {54072a7f-a845-4b78-b63f-fc47c583e0b8} koDocker_UDL_Language.py

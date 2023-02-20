@@ -6,6 +6,66 @@ h1,h2,h3,h4,h5,h6{
 	color:hsl(0, 0%, 30%);
 }
 
+ul{
+	margin: 10px;
+	padding: 10px;
+}
+
+li {
+	margin: 0px;
+	padding: 0px;
+}
+
+.main-table{
+	width: 330px;
+}
+
+.main-table-row{
+	padding: 3px;
+}
+
+.main-table-td-left{
+	color: #cdcdcd;
+	width: 140px;
+	width: 150px;
+	
+}
+
+.main-table-td-left strong {
+	color: #ffffff;
+	float: right;
+}
+
+.main-table-td-right{
+	color: #ffffff;
+	
+	
+	
+}
+
+.main-table-td{
+	color: #ababab;
+	
+}
+
+.second-div{
+	padding: 10px;
+	margin: 10px;
+}
+
+.dark{
+	float: right;
+	color: #ababab;
+	padding: 0px;
+	margin: 0px;
+}
+
+.plain{
+	
+	list-style:none;
+	color:#efefef;
+}
+
 .box-element{
 	box-shadow:hsl(0, 0%, 80%) 0 0 16px;
 	background-color: #fff;
