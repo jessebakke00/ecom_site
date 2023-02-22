@@ -6,6 +6,117 @@ h1,h2,h3,h4,h5,h6{
 	color:hsl(0, 0%, 30%);
 }
 
+/*strong{
+	margin-left: 0px;
+	padding-left: 0px;
+}*/
+
+.login-container{
+	width: 100%;
+	background-color: #cdcdcd;
+	text-align: center;
+	display: block;
+}
+
+.form-container {
+	width: 30%;
+	display: block;
+	margin-left: 30%;
+	border: 1px solid black;
+}
+
+.form-container form {
+/*	width: 400px;
+	border: 1px solid black;*/
+}
+
+.main-table{
+	width: 340px;
+	margin: 10px;
+	padding: 20px;
+	margin-top: 20px;
+	/*box-shadow:hsl(0, 0%, 80%) 0 0 16px;*/
+}
+
+.main-table-td-left{
+	color: #cdcdcd;
+	width: 140px;
+	min-width: 140px;	
+}
+
+
+.main-table-td-right{	
+	color: #efefef;
+}
+
+.main-table-td-left strong {
+	color: #ffffff;
+	left: 10px;
+}
+
+.skinny-table{
+	width: 400px;
+	padding: 10px;
+	border: 1px solid black;
+}
+
+.skinny-table tr td{
+	border: 1px solid blue;
+}
+
+.main-table{
+	border: 1px solid black;
+}
+
+
+
+.second-div{
+	padding: 10px;
+	margin: 10px;	
+	display: flex;
+}
+
+
+.dark{
+	color: #545454;
+	padding: 10px;
+	margin: 3px;
+	margin-left: 7px;
+}
+
+.p-info{
+	border-bottom: 1px solid #545454;
+	
+}
+ 
+
+.small-head{
+	background-color: #4f868c!important;
+	margin: 0px;
+	padding: 15px 20px;
+	border-radius: 2px;
+	color: #efefef;
+	width: 400px;
+}
+ /*
+table{
+	padding: 10px;
+}*/
+
+.second-div{
+	display: flex;
+	padding: 10px;
+}
+
+.third-div{
+	flex: 1;
+}
+
+.plain{	
+	list-style:none;
+	color:#efefef;
+}
+
 .box-element{
 	box-shadow:hsl(0, 0%, 80%) 0 0 16px;
 	background-color: #fff;

@@ -11,6 +11,26 @@ h1,h2,h3,h4,h5,h6{
 	padding-left: 0px;
 }*/
 
+.login-container{
+	width: 100%;
+		
+	text-align: center;
+	display: block;
+}
+
+.form-container {
+	box-shadow:hsl(0, 0%, 80%) 0 0 16px;
+	width: 400px;
+	display: block;
+	margin-left: 30%;
+	margin-top: 20px;
+}
+
+.form-container form {
+	/*width: 400px;
+	border: 1px solid black;*/
+}
+
 .main-table{
 	width: 340px;
 	margin: 10px;
@@ -46,16 +66,10 @@ h1,h2,h3,h4,h5,h6{
 }
 
 .main-table{
-	border: 1px solid black;
+/*	border: 1px solid black;*/
 }
 
 
-table tr td:first-child{
-	/*width: 150px;
-	min-width: 150px;
-	max-width: 150px;
-	margin-top: -15px;*/
-}
 
 .second-div{
 	padding: 10px;
@@ -77,7 +91,7 @@ table tr td:first-child{
 }
  
 
-h4{
+.small-head{
 	background-color: #4f868c!important;
 	margin: 0px;
 	padding: 15px 20px;

@@ -6,7 +6,7 @@
   <h1>Register</h1>
   <p class="headline">Please complete the form to create an account</p>
   <hr>
-  <form method="post" action="">
+  <form method="post" action="">{% csrf_token %}
   <p><strong>
     {{ form.username.label }}
     </strong>
@@ -28,6 +28,9 @@
     <hr>
     <input type="submit" name="Create User">
   </p>
+  {% for message in messages %}
+    <p>{{ message }}</p>
+  {% endfor %}
   </form>
     
   

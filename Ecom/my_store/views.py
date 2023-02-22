@@ -1,34 +1,68 @@
 # Create your views here.
 import json
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.views.decorators.csrf import csrf_exempt
 import time
 from .custom_response import JsonResponse
 from .models import *
 from .utils import cookieCart, cookieData
+from django.contrib import messages
 from django.contrib.admin.forms import AuthenticationForm
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.forms import AuthenticationForm
+from django.contrib.auth.decorators import login_required, permission_required
 from django.contrib.admin.models import User
+from django.contrib.auth import authenticate, login, logout
 
+def user_logout(request):
+    if request.user.is_authenticated():
+        logout(request)
+        return redirect('store')
+        
 
 def create_user(request):
     form = UserCreationForm()
     
-    if request.method == request.POST:
-        form = UserCreateationForm()
+    if request.method == 'POST':
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            form.save()
+            user = form.cleaned_data.get('username')
+            messages.success(request, 'New user ' + user + ' was created')
+            return redirect('user_login')
+        
     context = {'form':form}
     return render(request, 'my_store/create_user.html', context)
 
-def login(request):
-    
-    context = {}
-    return render(request, 'my_store/login.html', context)
+def user_login(request):
+    if request.user.is_authenticated():
+        user = request.user
+        return redirect('store')
+    else:
+        form = AuthenticationForm()
+        
+        if request.method == 'POST':
+            username = request.POST.get('username')
+            password = request.POST.get('password')
+            user = authenticate(username=username, password=password)
+            
+            if user is not None:
+                if user.is_active:
+                    login(request, user)
+                    return redirect('store')
+            else:
+                
+                messages.info(request, 'Username or Password is incorrect')
+        else:
+            user = request.user
+            
+    print user    
+    context = {'form':form, 'user':user}
+    return render(request, 'my_store/user_login.html', context)
 
 
 def store(request):
-    #print request.META['HTTP_COOKIE']
-    print request.user
+    
     data = cookieData(request)
     cart_items = data['cart_items']
     order      = data['order']
@@ -53,19 +87,20 @@ def checkout(request):
     order      = data['order']
     items      = data['items']
         
-    context = {'items':items, 'order':order, 'cart_items':cart_items, 'shipping':False}
+    context = {'items':items, 'user': request.user, 'order':order, 'cart_items':cart_items, 'shipping':False}
     return render(request, 'my_store/checkout.html', context)
 
 
-
+@login_required
 def current_orders(request):
     orders = Order.objects.all()
     order_items = OrderItem.objects.all()
     shipping_address = ShippingAddress.objects.all()
     
-    context = {'orders':orders, 'order_items':order_items}
+    context = {'orders':orders, 'order_items':order_items, 'user':request.user}
     return render(request, 'my_store/current_orders.html', context)
 
+@login_required
 def ship_detail(request, transaction_id):
     transaction_id = float(transaction_id)
     print transaction_id
@@ -74,7 +109,7 @@ def ship_detail(request, transaction_id):
     shipping_address = ShippingAddress.objects.get(order=order)
     
     
-    context = {'order':order, 'shipping_address':shipping_address, 'order_items':order_items}
+    context = {'order':order, 'shipping_address':shipping_address, 'order_items':order_items, 'user':request.user}
     return render(request, 'my_store/order_detail.html', context)
 
 @csrf_exempt
@@ -191,10 +226,3 @@ def updateItem(request):
     
     return JsonResponse(data, safe=False)
 
-# @csrf_exempt
-# def updateCookie(request):   
-#     data = json.loads(request.POST.keys()[0])
-#     f = open('cart', 'w')
-#     f.write(request.POST.keys()[0])
-#     f.close()
-#     return JsonResponse('updated cookie', safe=False)

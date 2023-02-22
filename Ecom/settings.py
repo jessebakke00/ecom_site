@@ -3,8 +3,11 @@ import os
 
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 #CSRF_TRUSTED_ORIGINS = ['http://localhost:8000/', 'http://localhost:8000/admin']
+
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
+
+LOGIN_REDIRECT_URL = '/'
 
 ADMINS = (
     # ('Your Name', 'your_email@example.com'),
@@ -68,7 +71,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # URL prefix for static files.
 # Example: "http://media.lawrence.com/static/"
-STATIC_URL = '/static/'
+STATIC_URL = '/static'
 
 # URL prefix for admin static files -- CSS, JavaScript and images.
 # Make sure to use a trailing slash.
