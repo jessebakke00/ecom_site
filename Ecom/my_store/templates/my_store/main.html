@@ -60,20 +60,32 @@
                         <a class="nav-link" href="{% url my_store.views.store %}">Home <span class="sr-only">(current)</span></a>
                         {% endif %}
                     </li>
-                    {% block admin_items %}{% endblock %}
+                    
+                    
+                    
+                    {% block admin_items %}
+                    {% if perms.my_store %}
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/current_orders/">Current Orders</a>
+                    </li>
+                    {% endif %}
+                    {% endblock %}
                 </ul>
+                {% block login_link %}
                 <div class="form-inline my-2 my-lg-0">
                     {% if user == "AnonymousUser" %}
                     <a href="/login/"class="btn btn-warning">Login</a>
-                    {% else %}
+                    {% endif %}
+                    {% if user != "AnonymousUser" %}
                     <a href="/logout/"class="btn btn-warning">Log Out</a>
                     {% endif %}
                     <a href="{% url my_store.views.cart %}">
                         <img  id="cart-icon" src="{{ STATIC_URL }}/images/cart.png">
                     </a>
                     <p id="cart-total">{{ cart_items }}</p>
-
+                
                 </div>
+                {% endblock %}
             </div>
         </nav>
         

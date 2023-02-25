@@ -36,9 +36,10 @@ def create_user(request):
 
 def user_login(request):
     if request.user.is_authenticated():
-        user = request.user
+        
         return redirect('store')
     else:
+        
         form = AuthenticationForm()
         
         if request.method == 'POST':

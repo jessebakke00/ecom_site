@@ -6,27 +6,36 @@ h1,h2,h3,h4,h5,h6{
 	color:hsl(0, 0%, 30%);
 }
 
-/*strong{
-	margin-left: 0px;
-	padding-left: 0px;
-}*/
+.order-head{
+	border-radius: 5px 5px 5pc 5px;
+}
+
+.main-container{
+	padding: 5px;
+}
+
+.item-container{
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
 
 .login-container{
 	width: 100%;
-	background-color: #cdcdcd;
+		
 	text-align: center;
 	display: block;
 }
 
 .form-container {
-	width: 30%;
+	box-shadow:hsl(0, 0%, 80%) 0 0 16px;
+	width: 400px;
 	display: block;
 	margin-left: 30%;
-	border: 1px solid black;
+	margin-top: 20px;
 }
 
 .form-container form {
-/*	width: 400px;
+	/*width: 400px;
 	border: 1px solid black;*/
 }
 
@@ -65,7 +74,7 @@ h1,h2,h3,h4,h5,h6{
 }
 
 .main-table{
-	border: 1px solid black;
+/*	border: 1px solid black;*/
 }
 
 

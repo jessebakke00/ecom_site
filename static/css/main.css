@@ -11,23 +11,33 @@ h1,h2,h3,h4,h5,h6{
 	padding-left: 0px;
 }*/
 
+.main-container{
+	padding: 5px;
+}
+
+.item-container{
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
 .login-container{
 	width: 100%;
-	background-color: #cdcdcd;
+		
 	text-align: center;
 	display: block;
 }
 
 .form-container {
-	width: 30%;
+	box-shadow:hsl(0, 0%, 80%) 0 0 16px;
+	width: 400px;
 	display: block;
 	margin-left: 30%;
-	border: 1px solid black;
+	margin-top: 20px;
 }
 
 .form-container form {
-	width: 400px;
-	border: 1px solid black;
+	/*width: 400px;
+	border: 1px solid black;*/
 }
 
 .main-table{
@@ -65,7 +75,7 @@ h1,h2,h3,h4,h5,h6{
 }
 
 .main-table{
-	border: 1px solid black;
+/*	border: 1px solid black;*/
 }
 
 

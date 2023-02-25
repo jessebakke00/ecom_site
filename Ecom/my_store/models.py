@@ -1,5 +1,8 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.core.files.storage import FileSystemStorage
+
+fs = FileSystemStorage(location='/media/images')
 
 # customer, product, order, and ordered item models
 
@@ -23,6 +26,7 @@ class Product(models.Model):
     price = models.FloatField()
     digital = models.BooleanField(default=False, blank=False)
     image_url = models.CharField(max_length=200, blank=True, null=True)
+    # image_url = models.ImageField(upload_to='images')
     
     def __str__(self):
         return self.name
@@ -66,7 +70,7 @@ class OrderItem(models.Model):
     date_added = models.DateTimeField(auto_now_add=True)
     
     def __str__(self):
-        return self.product.name + ' x ' + str(self.quantity)
+        return self.product.name 
     
     @property
     def get_total(self):

@@ -11,6 +11,15 @@ h1,h2,h3,h4,h5,h6{
 	padding-left: 0px;
 }*/
 
+.main-container{
+	padding: 5px;
+}
+
+.item-container{
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
 .login-container{
 	width: 100%;
 		
