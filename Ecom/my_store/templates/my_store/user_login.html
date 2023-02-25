@@ -12,12 +12,12 @@
     <form method="post" action="">{% csrf_token %}
       <p>Username: {{ form.username }}</p>
       <p>Password: {{ form.password }}</p>
-      <p><input type="submit" name="login"></p>
+      <p><input class="submit" type="submit" name="login"></p>
       {% for message in messages %}
       {{ message }}
       {% endfor %}
     </form>
-    <p>Not Signed Up? Click <a href="/create_user/">Here</a> to Sign Up</p>
+    <p class="signup">Not Signed Up? Click <a href="/create_user/">Here</a> to Sign Up</p>
   </div>
 </div>
 {% endblock %}
