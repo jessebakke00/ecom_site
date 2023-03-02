@@ -10,7 +10,7 @@ def cookieCart(request):
         if c.startswith('cart'):
             # print json.loads(c[5:])
             cart = json.loads(c[5:])
-    print cart
+    
     items = []
     order = {'get_cart_items':0, 'get_cart_total':0}
     cart_items = order['get_cart_items']
