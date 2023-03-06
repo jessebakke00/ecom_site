@@ -6,6 +6,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 FILE_UPLOAD_PERMISSIONS = 0644
 # FILE_UPLOAD_TEMP_DIR = '/'
 DEBUG = True
+#DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
 LOGIN_REDIRECT_URL = '/'

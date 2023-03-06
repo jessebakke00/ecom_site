@@ -63,14 +63,15 @@ def user_login(request):
 
 
 def store(request):
-    
+    print request.user
     data = cookieData(request)
+    print data
     cart_items = data['cart_items']
     order      = data['order']
     items      = data['items']
         
     products = Product.objects.all()
-    context = {'products':products, 'cart_items':cart_items, 'shipping':False, 'user':str(request.user)}
+    context = {'products':products, 'cart_items':cart_items, 'user':str(request.user)}
     return render(request, 'my_store/store.html', context)
 
 def cart(request):
@@ -79,7 +80,7 @@ def cart(request):
     order      = data['order']
     items      = data['items']
     
-    context = {'items':items, 'order':order, 'user':request.user, 'cart_items':cart_items, 'shipping':False}
+    context = {'items':items, 'order':order, 'cart_items':cart_items, 'user':str(request.user)}
     return render(request, 'my_store/cart.html', context)
 
 def checkout(request):
@@ -88,7 +89,7 @@ def checkout(request):
     order      = data['order']
     items      = data['items']
         
-    context = {'items':items, 'user': request.user, 'order':order, 'cart_items':cart_items, 'shipping':False}
+    context = {'items':items, 'user': str(request.user), 'order':order, 'cart_items':cart_items, 'shipping':False}
     return render(request, 'my_store/checkout.html', context)
 
 
@@ -98,7 +99,7 @@ def current_orders(request):
     order_items = OrderItem.objects.all()
     shipping_address = ShippingAddress.objects.all()
     
-    context = {'orders':orders, 'order_items':order_items, 'user':request.user}
+    context = {'orders':orders, 'order_items':order_items, 'user':str(request.user)}
     return render(request, 'my_store/current_orders.html', context)
 
 @login_required

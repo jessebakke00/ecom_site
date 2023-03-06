@@ -85,6 +85,10 @@ h1,h2,h3,h4,h5,h6{
 	left: 10px;
 }
 
+.main-head{
+	color: #efefef;
+}
+
 .skinny-table{
 	width: 400px;
 	padding: 10px;
@@ -96,6 +100,7 @@ h1,h2,h3,h4,h5,h6{
 
 .main-table{
 /*	border: 1px solid black;*/
+	margin-top: 10px;
 }
 
 .second-div{
