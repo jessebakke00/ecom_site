@@ -20,6 +20,15 @@
               <td class="main-table-td-right">
                 {{ shipping_address.order }}  
               </td>
+              <td>
+                
+                <button class="btn btn-warning {{ shipping_address.order.css_class }}" id="update-shipped-status">{{ shipping_address.order.status }}</button>
+                
+                
+                <!--<button class="btn btn-warning" id="update-shipped-status">Click to Unship Order</button>-->
+                
+                
+              </td>
             </tr>
             <tr>
               <td class="main-table-td-left">
@@ -28,6 +37,9 @@
               <td class="main-table-td-right">
                 {{ shipping_address.customer.name }}    
               </td>
+              <td>
+                
+              </td>
             </tr>
             <tr>
               <td class="main-table-td-left">
@@ -35,6 +47,9 @@
               </td>
               <td class="main-table-td-right">
                 {{ shipping_address.customer.email }}    
+              </td>
+              <td>
+                
               </td>
             </tr>
           </table>
@@ -97,5 +112,26 @@
     </div>
   </div>
 </div>
+<script type="text/javascript">
+  var shipBtn = document.getElementById('update-shipped-status');
+  shipBtn.addEventListener('click', function(){
+    var url = '/update_shipped_status/';
+    fetch(url, {
+      method: 'POST',
+      headers: {
+        'Content-Type':'application/json',
+        'X_CSRFToken': csrftoken,
+      },
+      body: JSON.stringify({'orderNumber':"{{ shipping_address.order }}"})
+    })
+      .then((response) => {
+        console.log('order number');
+        return response.json();
+        })
+      .then((data) => {
+          location.reload();
+        })
+    });
+</script>
 
 {% endblock %}

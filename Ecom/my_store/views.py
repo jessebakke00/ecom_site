@@ -105,7 +105,7 @@ def current_orders(request):
 @login_required
 def ship_detail(request, transaction_id):
     transaction_id = float(transaction_id)
-    print transaction_id
+    #print transaction_id
     order = Order.objects.get(transaction_id=transaction_id)
     order_items = OrderItem.objects.filter(order=order)
     shipping_address = ShippingAddress.objects.get(order=order)
@@ -199,6 +199,17 @@ def processOrder(request):
     # f.close()
     
     return JsonResponse('Order Processed!!', safe=False)
+
+@csrf_exempt
+def update_shipped_status(request):
+    data = json.loads(request.POST.keys()[0])
+    order_num = data['orderNumber']
+    order = Order.objects.get(transaction_id=order_num)
+    order.status_shipped = True
+    order.save()
+    
+    
+    return JsonResponse('It workded', safe=False)
 
 @csrf_exempt
 def updateItem(request):

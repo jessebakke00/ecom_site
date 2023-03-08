@@ -26,7 +26,7 @@ class Product(models.Model):
     price = models.FloatField()
     digital = models.BooleanField(default=False, blank=False)
     image_url = models.CharField(max_length=200, blank=True, null=True)
-    # image_url = models.ImageField(upload_to='images')
+    #image_url = models.ImageField(upload_to='images')
     
     def __str__(self):
         return self.name
@@ -37,10 +37,25 @@ class Order(models.Model):
     complete = models.BooleanField(default=False, blank=False)
     transaction_id = models.CharField(max_length=200, null=True)
     # status = models.CharField(max_length=1, choices=STATUS_CHOICES)
+    status_shipped = models.BooleanField(default=False, blank=False)
     
     def __str__(self):
         return str(self.transaction_id)
     
+    @property
+    def status(self):
+        if self.status_shipped == True:
+            return "Shipped"
+        elif self.status_shipped == False:
+            return "Not Shipped"
+        
+    @property
+    def css_class(self):
+        if self.status_shipped == True:
+            return "hidden"
+        elif self.status_shipped == False:
+            return "active"
+        
     @property
     def get_cart_total(self):
         orderitems = self.orderitem_set.all()
