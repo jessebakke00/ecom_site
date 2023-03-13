@@ -19,3 +19,7 @@ git config --global user.name "jessebakke00"
 
 echo '_site_setup or _git_setup'
 
+echo "Site Setup"
+site_setup
+echo "Git Setup"
+git_setup

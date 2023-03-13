@@ -62,16 +62,38 @@ def user_login(request):
     return render(request, 'my_store/user_login.html', context)
 
 
+def product_detail(request, product_id):
+    
+    data       = cookieData(request)
+    
+    cart_items = data['cart_items']
+    order      = data['order']
+    items      = data['items']
+    
+    product = Product.objects.get(id=product_id)
+    
+    context = {
+        'product'   : product,
+        'user'      : str(request.user),
+        'cart_items': cart_items,
+    }
+    
+    return render(request, 'my_store/product_detail.html', context)
+
 def store(request):
-    print request.user
+    
     data = cookieData(request)
-    print data
+    
     cart_items = data['cart_items']
     order      = data['order']
     items      = data['items']
         
     products = Product.objects.all()
-    context = {'products':products, 'cart_items':cart_items, 'user':str(request.user)}
+    context = {
+        'products':products,
+        'cart_items':cart_items,
+        'user':str(request.user)
+    }
     return render(request, 'my_store/store.html', context)
 
 def cart(request):
@@ -91,6 +113,7 @@ def checkout(request):
         
     context = {'items':items, 'user': str(request.user), 'order':order, 'cart_items':cart_items, 'shipping':False}
     return render(request, 'my_store/checkout.html', context)
+
 
 
 @login_required
@@ -113,6 +136,7 @@ def ship_detail(request, transaction_id):
     
     context = {'order':order, 'shipping_address':shipping_address, 'order_items':order_items, 'user':request.user}
     return render(request, 'my_store/order_detail.html', context)
+
 
 @csrf_exempt
 def processOrder(request):

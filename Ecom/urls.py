@@ -23,6 +23,7 @@ urlpatterns = patterns('',
     url(r'^current_orders/', 'Ecom.my_store.views.current_orders', name='current_orders'),
     url(r'^order/(?P<transaction_id>[0-9].+\.[0-9]{1,2})/$', 'Ecom.my_store.views.ship_detail', name='ship_detail'),
     url(r'^update_shipped_status/', 'Ecom.my_store.views.update_shipped_status', name='update_shipped_status'),
+    url(r'^description/(?P<product_id>[0-9]{1,10})/$', 'Ecom.my_store.views.product_detail', name='product_detail'),
     # Uncomment the admin/doc line below to enable admin documentation:
     #url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 

@@ -23,6 +23,7 @@ class Customer(models.Model):
     
 class Product(models.Model):
     name = models.CharField(max_length=200, null=True)
+    description = models.CharField(max_length=200, null=True)
     price = models.FloatField()
     digital = models.BooleanField(default=False, blank=False)
     image_url = models.CharField(max_length=200, blank=True, null=True)

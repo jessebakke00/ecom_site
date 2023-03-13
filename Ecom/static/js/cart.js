@@ -6,8 +6,8 @@ for(var i=0; i<updateBtns.length; i++){
         var action = this.dataset.action;
         console.log('product:', productId, 'action:', action);
         console.log('USER:', user);
-        if(user === 'AnonymousUser' ){
-            addCookieItem(productId, action)
+        if(user == 'AnonymousUser' ){
+            addCookieItem(productId, action);
         }else{
             updateUserOrder(productId, action);
         }
@@ -46,7 +46,7 @@ function updateUserOrder(productId, action){
         method:'POST',
         headers:{
             'Content-Type':'application/json',
-            'XCSRFToken':csrftoken,
+            'X_CSRFToken':csrftoken,
         },
         body:JSON.stringify({'productId':productId, 'action':action})
     })

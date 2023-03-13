@@ -6,8 +6,10 @@
 </script>
 {% endblock %}
 
-{% block content %}
 
+{% block overlay %}{% endblock %}
+
+{% block content %}
 <div class="row">
     {% for product in products %}
     <div class="col-lg-4">
@@ -16,12 +18,12 @@
             <h6><strong>{{ product.name }}</strong></h6>
             <br>
             <button data-product="{{ product.id }}" data-action="add" class="btn btn-outline-secondary add-btn update-cart">Add to Cart</button>
-            <a class="btn btn-outline-success" href="{% url my_store.views.cart %}">View</a>
+            <a href="/description/{{ product.id }}/" class="btn btn-outline-success view-btn">View</a>
+            
             <h4 style="display: inline-block; float: right"><strong>${{ product.price|floatformat:2 }}</strong></h4>
         </div>
-    </div>
-    {% endfor %}
-    
+    </div>       
+    {% endfor %}    
 </div>
 
 {% endblock %}
